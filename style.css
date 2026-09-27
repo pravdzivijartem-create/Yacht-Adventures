@@ -752,7 +752,6 @@ line-height: 110.00000000000001%;
 letter-spacing: 0%;
 text-transform: uppercase;
 margin-top: 50px;
-
 }
 .afoot{
     margin-top: 200px;
@@ -826,4 +825,44 @@ top: 100px;
     100%{
         color: var(--color-winter-);
     }
+}
+
+
+
+
+.card {
+    width: 300px;
+    height: 400px;
+    perspective:1000px;
+}
+
+.card__inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    right: 20px;
+    bottom: 20px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.card__front,
+.card__back {
+
+
+    position: absolute;
+    left: -15px;
+    bottom: -38px;
+    backface-visibility: hidden;
+    
+
+}
+
+
+.card__back{
+    transform: rotateY(180deg);
+}
+
+.card:hover .card__inner{
+    transform: rotateY(180deg);
 }
